@@ -1,0 +1,139 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+:root{
+    --white:#fafafb;
+    --purple:#9a67ea;
+    --blue-light:#04d4c3;
+    --blue-dark: #2a73c2;
+    --green: #2c7b90;
+}
+
+body{
+    /* background: linear-gradient(to bottom, var(--purple), var(--blue-light)); */
+    background: linear-gradient(-45deg, rgb(34, 94, 158) 0%, rgb(113, 44, 105) 100%);
+    font-family: 'Prompt', sans-serif;
+    height: 100vh;
+    /* height: 100vh; para que ocupe toda la pantalla y el linear-gradient sea responsivo */
+}
+
+.container{
+    max-width: 80%;
+    width: 400px;
+    height: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Perfil */
+
+.perfil h1{
+    color: var(--white);
+    margin: 10px;
+}
+
+.perfil span{
+    color: var(--white);
+    letter-spacing: 1px;
+    /* letter-spacing Espaciado entre las palabras */
+}
+
+#fecha{
+    color: var(--white);
+    padding: 50px 0 5px 0;
+}
+
+/* Agregar Tarea */
+
+.agregar-tarea{
+    background-color: var(--white);
+    border-radius: 15px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    gap: 70px;
+    /* gap para separacion dentro de los elementos */
+    margin: 40px 0;
+}
+
+.agregar-tarea input{
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    border: none;
+    background-color: var(--white);
+    color: var(--purple)
+}
+
+.agregar-tarea input:focus{
+    outline: solid var(--blue-dark);
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+
+.agregar-tarea i{
+    font-size: 50px;
+    /* Cuando se trabaja con iconos, para hacerlo mas grande usamos 
+    font-size y no width, xq no lo tomara */
+    color: var(--purple);
+}
+
+.agregar-tarea i:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.agregar-tarea input::placeholder{
+    /* Para acceder y modificicar el placeholder */
+    font-size: 1.1rem;
+    color: var(--purple);
+    text-align: center;
+}
+
+/* Seccion Tarea */
+
+.seccion-tarea h3{
+    color: var(--white);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.seccion-tarea li{
+    display: flex;
+    background: linear-gradient(to bottom, var(--blue-dark), var(--green));
+    border-radius: 15px;
+    padding: 10px;
+    align-items: center;
+    justify-content: space-between;
+    margin: 35px 0;
+    color: var(--white);
+}
+
+.seccion-tarea i{
+    font-size: 25px;
+    /* color: var(--white); */
+}
+
+.seccion-tarea i:hover{
+    color: var(--blue-light);
+    cursor: pointer;
+}
+
+.seccion-tarea  ul p{
+    font-size: 1.2rem;
+    /* color: var(--white); */
+}
+
+.line-trough{
+    text-decoration: line-through;
+    /* line-through lo usamos para tachar la palabra, cuando 
+    ya este realizada */
+    color: var(--blue-light);
+}
